@@ -53,7 +53,7 @@ const Tabs = (topics) => {
 
 // console.log(Tabs(['javascript', 'bootstrap', 'technology']))
 
-const tabsAppender = (selector) => {
+
   // TASK 4
   // ---------------------
   // Implement this function which takes a css selector as its only argument.
@@ -61,6 +61,18 @@ const tabsAppender = (selector) => {
   // Find the array of topics inside the response, and create the tabs using the Tabs component.
   // Append the tabs to the element in the DOM that matches the selector passed to the function.
   //
+const tabsAppender = (selector) => {
+  const selectorElem = document.querySelector(selector)
+
+  axios.get(`http://localhost:5000/api/topics`)
+  .then(res => {
+    // console.log(res.data.topics)
+    let tabs = Tabs(res.data.topics)
+    selectorElem.appendChild(tabs)
+  })
+  .catch(err => {
+    console.error(err)
+  })
 }
 
 export { Tabs, tabsAppender }
