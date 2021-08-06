@@ -65,7 +65,27 @@ In meeting the minimum viable product (MVP) specifications listed below, your pr
 Be prepared to demonstrate your understanding of this week's concepts by answering questions on the following topics. You might prepare by writing down your own answers before hand.
 
 1. What is the DOM?
+
+DOM stands for Document Object Model.
+DOM is not Javascript, HTML, and CSS.
+It is an object representation of the HTML elements of a webpage.
+DOM is language Neutral API(Application Programming Interface).
+It is a tree like structure representing your content structure and style.
+DOM is the bridge between Content and the Browser.
+DOM is dynamic meaning if we change it live it will change right before our eyes.
+
 2. What is an event?
+
+Every User interaction with a site is an event: a click, moving the mouse, scrolling the page, pressing a key on the keyboard, these are all events on the page, and the browser can detect all of them. There are tons of different events the browser tracks.
+
 3. What is an event listener?
+
+The tracking process and subsequent action taken is called an event listner. We put an event listner on an element and give it a callback. When that event is triggered on the elements the callback is run.
+
 4. Why would we convert a NodeList into an Array?
+
+A nodelist may look like an array, but in reality they both are two completely different things. A nodelist object is basically a collection of DOM nodes extracted from the HTML document. An array is a specific datatype in javascript that can store a collection of arbitary elements. We could convert a nodelist into an array so that we can utilise array methods on it.
+
 5. What is a component?
+
+Component is a part or element of a larger whole. Components are Single Modular Piece of code. Usually made up of three: HTML, CSS and Javascript. The main reason we use components is that they are reusable. We need to keep our code D.R.Y= we don't want to repeat ourselves. Component are stand alone you can use it on many pages as you need.
