@@ -1,4 +1,4 @@
-const Tabs = (topics) => {
+import axios from 'axios'
   // TASK 3
   // ---------------------
   // Implement this function which takes an array of strings ("topics") as its only argument.
@@ -13,7 +13,45 @@ const Tabs = (topics) => {
   //   <div class="tab">technology</div>
   // </div>
   //
+const Tabs = (topics) => {
+  // <div class="topics"> </div>
+  const topicDiv = document.createElement('div')
+  topicDiv.classList = 'topics'
+
+  // <div class="tab">javascript</div>
+  const tab1div = document.createElement('div')
+  tab1div.classList = 'tab'
+  tab1div.textContent = topics[0]
+  topicDiv.append(tab1div)
+
+  // <div class="tab">bootstrap</div>
+  const tab2div = document.createElement('div')
+  tab2div.classList = 'tab'
+  tab2div.textContent = topics[1]
+  topicDiv.append(tab2div)
+
+  //<div class="tab">technology</div>
+  const tab3div = document.createElement('div')
+  tab3div.classList = 'tab'
+  tab3div.textContent = topics[2]
+  topicDiv.append(tab3div)
+
+  // <div class="tab">jquery</div>
+  const tab4div = document.createElement('div')
+  tab4div.classList = 'tab'
+  tab4div.textContent = topics[3]
+  topicDiv.append(tab4div)
+
+  // <div class="tab">node.js</div>
+  const tab5div = document.createElement('div')
+  tab5div.classList = 'tab'
+  tab5div.textContent = topics[4]
+  topicDiv.append(tab5div)
+
+  return topicDiv
 }
+
+// console.log(Tabs(['javascript', 'bootstrap', 'technology']))
 
 const tabsAppender = (selector) => {
   // TASK 4
